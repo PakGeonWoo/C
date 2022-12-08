@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int main_Array(void) {
+int main(void) {
 
 
-	// ¹è¿­ Å©±â´Â Ç×»ó »ó¼ö·Î ¼±¾ğ(º¯¼ö·Î intÇü ÁöÁ¤ÇØµµ ¾ÈµÅ)
+	// ë°°ì—´ í¬ê¸°ëŠ” í•­ìƒ ìƒìˆ˜ë¡œ ì„ ì–¸(ë³€ìˆ˜ë¡œ intí˜• ì§€ì •í•´ë„ ì•ˆë¼)
 	/*int subway_array[3];
 
 	subway_array[0] = 30;

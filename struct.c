@@ -7,7 +7,7 @@ struct GameInfo
 	int price;
 	char* company;
 
-	//±¸Á¶Ã¼ ¾È¿¡ ±¸Á¶Ã¼
+	//êµ¬ì¡°ì²´ ì•ˆì— êµ¬ì¡°ì²´
 	struct GameInfo* friendGame;
 };
 typedef struct GameInformation
@@ -20,74 +20,74 @@ typedef struct GameInformation
 	struct GameInfo* friendGame;
 } GAME_INFO;
 
-int main_struct(void) {
+int main(void) {
 
-	// ±¸Á¶Ã¼ »ç¿ë
+	// êµ¬ì¡°ì²´ ì‚¬ìš©
 	struct GameInfo gameinfo1;
-	gameinfo1.name = "³ªµµ°ÔÀÓ";
+	gameinfo1.name = "ë‚˜ë„ê²Œì„";
 	gameinfo1.year = 2017;
 	gameinfo1.price = 50;
-	gameinfo1.company = "³ªµµÈ¸»ç";
+	gameinfo1.company = "ë‚˜ë„íšŒì‚¬";
 
-	// ±¸Á¶Ã¼ Ãâ·Â
-	printf("°ÔÀÓ¸í >> %s\n", gameinfo1.name);
-	printf("¹ß¸Å³âµµ >> %d\n", gameinfo1.year);
-	printf("°¡°İ >> %d\n", gameinfo1.price);
-	printf("Á¦ÀÛ»ç >> %s\n", gameinfo1.company);
+	// êµ¬ì¡°ì²´ ì¶œë ¥
+	printf("ê²Œì„ëª… >> %s\n", gameinfo1.name);
+	printf("ë°œë§¤ë…„ë„ >> %d\n", gameinfo1.year);
+	printf("ê°€ê²© >> %d\n", gameinfo1.price);
+	printf("ì œì‘ì‚¬ >> %s\n", gameinfo1.company);
 
-	// ±¸Á¶Ã¼¸¦ ¹è¿­Ã³·³ ÃÊ±âÈ­
-	struct GameInfo gameinfo2 = {"³Êµµ°ÔÀÓ", 2017, 100, "³ÊµµÈ¸»ç"};
+	// êµ¬ì¡°ì²´ë¥¼ ë°°ì—´ì²˜ëŸ¼ ì´ˆê¸°í™”
+	struct GameInfo gameinfo2 = {"ë„ˆë„ê²Œì„", 2017, 100, "ë„ˆë„íšŒì‚¬"};
 	printf("\n");
-	printf("°ÔÀÓ¸í >> %s\n", gameinfo2.name);
-	printf("¹ß¸Å³âµµ >> %d\n", gameinfo2.year);
-	printf("°¡°İ >> %d\n", gameinfo2.price);
-	printf("Á¦ÀÛ»ç >> %s\n", gameinfo2.company);
+	printf("ê²Œì„ëª… >> %s\n", gameinfo2.name);
+	printf("ë°œë§¤ë…„ë„ >> %d\n", gameinfo2.year);
+	printf("ê°€ê²© >> %d\n", gameinfo2.price);
+	printf("ì œì‘ì‚¬ >> %s\n", gameinfo2.company);
 
-	// ±¸Á¶Ã¼ ¹è¿­
+	// êµ¬ì¡°ì²´ ë°°ì—´
 	struct GameInfo gameArray[2] = {
 
-		{"³ªµµ°ÔÀÓ", 2017, 50, "³ªµµÈ¸»ç"},
-		{"³Êµµ°ÔÀÓ", 2017, 100, "³ÊµµÈ¸»ç"}
+		{"ë‚˜ë„ê²Œì„", 2017, 50, "ë‚˜ë„íšŒì‚¬"},
+		{"ë„ˆë„ê²Œì„", 2017, 100, "ë„ˆë„íšŒì‚¬"}
 
 	};
 
 
-	// ±¸Á¶Ã¼ Æ÷ÀÎÅÍ
+	// êµ¬ì¡°ì²´ í¬ì¸í„°
 	struct GameInfo* gamePtr;
 	gamePtr = &gameinfo1;
-	printf("------------ ±¸Á¶Ã¼ Æ÷ÀÎÅÍ -----------\n");
-	//printf("°ÔÀÓ¸í >> %s\n", (*gamePtr).name); // *ptr
-	//printf("¹ß¸Å³âµµ >> %d\n", (*gamePtr).year);
-	//printf("°¡°İ >> %d\n", (*gamePtr).price);
-	//printf("Á¦ÀÛ»ç >> %s\n", (*gamePtr).company);
-	printf("°ÔÀÓ¸í >> %s\n", gamePtr->name); // *ptr
-	printf("¹ß¸Å³âµµ >> %d\n", gamePtr->year);
-	printf("°¡°İ >> %d\n", gamePtr->price);
-	printf("Á¦ÀÛ»ç >> %s\n", gamePtr->company);
+	printf("------------ êµ¬ì¡°ì²´ í¬ì¸í„° -----------\n");
+	//printf("ê²Œì„ëª… >> %s\n", (*gamePtr).name); // *ptr
+	//printf("ë°œë§¤ë…„ë„ >> %d\n", (*gamePtr).year);
+	//printf("ê°€ê²© >> %d\n", (*gamePtr).price);
+	//printf("ì œì‘ì‚¬ >> %s\n", (*gamePtr).company);
+	printf("ê²Œì„ëª… >> %s\n", gamePtr->name); // *ptr
+	printf("ë°œë§¤ë…„ë„ >> %d\n", gamePtr->year);
+	printf("ê°€ê²© >> %d\n", gamePtr->price);
+	printf("ì œì‘ì‚¬ >> %s\n", gamePtr->company);
 
-	// ±¸Á¶Ã¼ ¾È¿¡ ±¸Á¶Ã¼
+	// êµ¬ì¡°ì²´ ì•ˆì— êµ¬ì¡°ì²´
 	gameinfo1.friendGame = &gameinfo2;
-	printf("------------ ±¸Á¶Ã¼ ¾È¿¡ ±¸Á¶Ã¼ -----------\n");
-	printf("°ÔÀÓ¸í >> %s\n", gameinfo1.friendGame->name);
-	printf("¹ß¸Å³âµµ >> %d\n", gameinfo1.friendGame->year);
-	printf("°¡°İ >> %d\n", gameinfo1.friendGame->price);
-	printf("Á¦ÀÛ»ç >> %s\n", gameinfo1.friendGame->company);
+	printf("------------ êµ¬ì¡°ì²´ ì•ˆì— êµ¬ì¡°ì²´ -----------\n");
+	printf("ê²Œì„ëª… >> %s\n", gameinfo1.friendGame->name);
+	printf("ë°œë§¤ë…„ë„ >> %d\n", gameinfo1.friendGame->year);
+	printf("ê°€ê²© >> %d\n", gameinfo1.friendGame->price);
+	printf("ì œì‘ì‚¬ >> %s\n", gameinfo1.friendGame->company);
 	
 	// typedef
-	// ÀÚ·áÇü¿¡ º°¸í ÁöÁ¤
+	// ìë£Œí˜•ì— ë³„ëª… ì§€ì •
 	int i = 1;
-	typedef int Á¤¼ö;
-	Á¤¼ö Á¤¼öº¯¼ö = 3;
-	printf("%d\n", Á¤¼öº¯¼ö);
+	typedef int ì •ìˆ˜;
+	ì •ìˆ˜ ì •ìˆ˜ë³€ìˆ˜ = 3;
+	printf("%d\n", ì •ìˆ˜ë³€ìˆ˜);
 
 
-	typedef struct GameInfo °ÔÀÓÁ¤º¸;
-	°ÔÀÓÁ¤º¸ game1;
-	game1.name = "¿µ¾î°ÔÀÓ";
+	typedef struct GameInfo ê²Œì„ì •ë³´;
+	ê²Œì„ì •ë³´ game1;
+	game1.name = "ì˜ì–´ê²Œì„";
 	game1.year = 2017;
 
 	GAME_INFO game2;
-	game2.name = "ÇÑ±Û°ÔÀÓ";
+	game2.name = "í•œê¸€ê²Œì„";
 
 
 	return 0;

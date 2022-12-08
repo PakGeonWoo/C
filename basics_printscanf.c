@@ -1,6 +1,6 @@
 #include <stdio.h>
 // const = 변함없는
-int main_printscanf() {
+int main() {
 	// %d = int
 	// %f = float 
 	// %lf = double
